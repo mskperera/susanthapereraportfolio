@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Portfolio</title>
+    <!-- Changed to the correct Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- CSS Section -->
+    <style>
+        /* Style for navigation links */
+        .text-gray-600 {
+            color: #4A5568;
+        }
+
+        .hover\:text-sky-500:hover {
+            color: #3B82F6;
+        }
+
+        .transition {
+            transition: color 0.3s;
+        }
+
+        .duration-300 {
+            transition-duration: 300ms;
+        }
+
+        .active {
+            color: #1D4ED8;
+            font-weight: bold;
+            border-bottom: 2px solid #1D4ED8;
+        }
+    </style>
+</head>
+<!-- Rest of the code remains exactly the same -->
+
+<body class="bg-gray-100">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-lg z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-xl font-bold text-gray-800">Portfolio</div>
+                <div class="hidden md:flex space-x-8">
+                    <a id="link-home" href="#home"
+                        class="text-gray-600 hover:text-sky-500 transition duration-300">Home</a>
+                    <a id="link-about" href="#about"
+                        class="text-gray-600 hover:text-sky-500 transition duration-300">About</a>
+                    <a id="link-skills" href="#skills"
+                        class="text-gray-600 hover:text-sky-500 transition duration-300">Skills</a>
+                    <a id="link-projects" href="#projects"
+                        class="text-gray-600 hover:text-sky-500 transition duration-300">Projects</a>
+                    <a id="link-experience" href="#experience"
+                        class="text-gray-600 hover:text-sky-500 transition duration-300">Experience</a>
+                    <!-- <a id="link-blog" href="#blog" class="text-gray-600 hover:text-sky-500 transition duration-300">Blog</a> -->
+                    <a id="link-resume" href="#resume"
+                        class="text-gray-600 hover:text-sky-500 transition duration-300">Resume</a>
+                    <a id="link-contact" href="#contact"
+                        class="text-gray-600 hover:text-sky-500 transition duration-300">Contact</a>
+                    <a id="link-testimonials" href="#testimonials"
+                        class="text-gray-600 hover:text-sky-500 transition duration-300">Testimonials</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button class="md:hidden flex items-center">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile menu -->
+            <div class="md:hidden hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="#home" class="block px-3 py-2 text-gray-600 hover:text-sky-500">Home</a>
+                    <a href="#about" class="block px-3 py-2 text-gray-600 hover:text-sky-500">About</a>
+                    <a href="#skills" class="block px-3 py-2 text-gray-600 hover:text-sky-500">Skills</a>
+                    <a href="#projects" class="block px-3 py-2 text-gray-600 hover:text-sky-500">Projects</a>
+                    <a href="#experience" class="block px-3 py-2 text-gray-600 hover:text-sky-500">Experience</a>
+                    <!-- <a href="#blog" class="block px-3 py-2 text-gray-600 hover:text-sky-500">Blog</a> -->
+                    <a href="#resume" class="block px-3 py-2 text-gray-600 hover:text-sky-500">Resume</a>
+                    <a href="#contact" class="block px-3 py-2 text-gray-600 hover:text-sky-500">Contact</a>
+                    <a href="#testimonials" class="block px-3 py-2 text-gray-600 hover:text-sky-500">Testimonials</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section with Banner -->
+    <section id="home" class="min-h-screen pt-16 bg-gradient-to-r from-sky-600 to-blue-400">
+        <div class="container mx-auto px-6 py-20">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+                <!-- Text Content -->
+                <div class="text-white md:w-1/2">
+                    <h1 class="text-5xl font-bold mb-4">Susantha Perera</h1>
+                    <p class="text-2xl mb-6">Full Stack Developer</p>
+                    <p class="text-lg mb-8">Transforming ideas into elegant digital solutions</p>
+                    <div class="flex gap-4">
+                        <a href="#contact"
+                            class="bg-white text-sky-600 px-6 py-3 rounded-lg hover:bg-gray-100 transition duration-300">
+                            Hire Me
+                        </a>
+                        <a href="#projects"
+                            class="border-2 border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-sky-600 transition duration-300">
+                            View Projects
+                        </a>
+                    </div>
+                </div>
+                <!-- Banner Image -->
+                <div class="md:w-1/2">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-white opacity-10 rounded-lg transform rotate-6"></div>
+                        <div class="relative bg-white p-4 rounded-lg shadow-xl">
+                            <img src="images/me_banner.jpg" alt="Profile"
+                                class="w-full h-[350px] rounded-lg object-cover" />
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-8">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <img src="images/me.JPG" alt="Profile" class="rounded-full w-64 h-64 object-cover" />
+                <p class="text-gray-600 leading-relaxed">
+                    Hello, I’m Susantha Perera, a Bachelor’s degree graduate from Colombo University, Sri Lanka, with
+                    over 7 years of experience in developing and designing full-stack software projects. I specialize in
+                    taking projects from architecture and design all the way to production.
+                    <br />
+                    My expertise covers a broad range of technologies, including cloud-based solutions, web
+                    applications, desktop applications, mobile app development, and backend servers. I also have
+                    experience managing medium-level DevOps, ensuring smooth deployment and system operations.
+                    <br />
+                    In my career, I have contributed to projects across diverse industries such as HR, POS and inventory
+                    management, IoT energy meter applications, and helpdesk systems. I am committed to delivering
+                    scalable, efficient, and user-friendly solutions that effectively address business and end-user
+                    needs.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-8">Skills</h2>
+            <div class="grid grid-cols-2 md:grid-cols-6 gap-6">
+                <!-- Skill Template -->
+                <!-- React.js -->
+                <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                    <div class="flex items-center justify-center mb-2">
+                        <i class="fab fa-react text-sky-500 text-2xl mr-2"></i>
+                        <h3 class="font-bold">React.js</h3>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2 mb-2">
+                        <div class="bg-sky-500 h-2 rounded-full" style="width: 80%;"></div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <p class="text-gray-600 mr-2">80%</p>
+                        <span class="text-2xl">😃</span>
+                    </div>
+                </div>
+                <!-- Next.js -->
+                <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                    <div class="flex items-center justify-center mb-2">
+                        <i class="fas fa-layer-group text-purple-500 text-2xl mr-2"></i>
+                        <h3 class="font-bold">Next.js</h3>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2 mb-2">
+                        <div class="bg-purple-500 h-2 rounded-full" style="width: 80%;"></div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <p class="text-gray-600 mr-2">80%</p>
+                        <span class="text-2xl">😃</span>
+                    </div>
+                </div>
+                <!-- Node.js -->
+                <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                    <div class="flex items-center justify-center mb-2">
+                        <i class="fab fa-node text-green-500 text-2xl mr-2"></i>
+                        <h3 class="font-bold">Node.js</h3>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2 mb-2">
+                        <div class="bg-green-500 h-2 rounded-full" style="width: 80%;"></div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <p class="text-gray-600 mr-2">80%</p>
+                        <span class="text-2xl">😃</span>
+                    </div>
+                </div>
+
+                <!-- NestJs -->
+                <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                    <div class="flex items-center justify-center mb-2">
+                        <i class="fas fa-cube text-red-500 text-2xl mr-2"></i>
+                        <h3 class="font-bold">NestJs</h3>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2 mb-2">
+                        <div class="bg-red-500 h-2 rounded-full" style="width: 40%;"></div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <p class="text-gray-600 mr-2">40%</p>
+                        <span class="text-2xl">😐</span>
+                    </div>
+                </div>
+                <!-- React Native -->
+                <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                    <div class="flex items-center justify-center mb-2">
+                        <i class="fab fa-react text-sky-500 text-2xl mr-2"></i>
+                        <h3 class="font-bold">React Native</h3>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2 mb-2">
+                        <div class="bg-sky-500 h-2 rounded-full" style="width: 50%;"></div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <p class="text-gray-600 mr-2">50%</p>
+                        <span class="text-2xl">🙂</span>
+                    </div>
+                </div>
+                <!-- ASP.NET C# -->
+                <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                    <div class="flex items-center justify-center mb-2">
+                        <i class="fab fa-microsoft text-sky-600 text-2xl mr-2"></i>
+                        <h3 class="font-bold">ASP.NET C#</h3>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2 mb-2">
+                        <div class="bg-sky-600 h-2 rounded-full" style="width: 80%;"></div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <p class="text-gray-600 mr-2">80%</p>
+                        <span class="text-2xl">😃</span>
+                    </div>
+                </div>
+                <!-- WPF C# -->
+                <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                    <div class="flex items-center justify-center mb-2">
+                        <i class="fas fa-desktop text-sky-500 text-2xl mr-2"></i>
+                        <h3 class="font-bold">WPF C#</h3>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2 mb-2">
+                        <div class="bg-sky-500 h-2 rounded-full" style="width: 80%;"></div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <p class="text-gray-600 mr-2">80%</p>
+                        <span class="text-2xl">😃</span>
+                    </div>
+                </div>
+                <!-- Python -->
+                <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                    <div class="flex items-center justify-center mb-2">
+                        <i class="fab fa-python text-yellow-500 text-2xl mr-2"></i>
+                        <h3 class="font-bold">Python</h3>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2 mb-2">
+                        <div class="bg-yellow-500 h-2 rounded-full" style="width: 20%;"></div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <p class="text-gray-600 mr-2">20%</p>
+                        <span class="text-2xl">😞</span>
+                    </div>
+                </div>
+                <!-- MSSQL -->
+                <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                    <div class="flex items-center justify-center mb-2">
+                        <i class="fas fa-database text-sky-500 text-2xl mr-2"></i>
+                        <h3 class="font-bold">MSSQL</h3>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2 mb-2">
+                        <div class="bg-sky-500 h-2 rounded-full" style="width: 80%;"></div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <p class="text-gray-600 mr-2">80%</p>
+                        <span class="text-2xl">😃</span>
+                    </div>
+                </div>
+                <!-- MySQL/MariaDB -->
+                <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                    <div class="flex items-center justify-center mb-2">
+                        <i class="fas fa-database text-orange-500 text-2xl mr-2"></i>
+                        <h3 class="font-bold">MySQL/MariaDB</h3>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2 mb-2">
+                        <div class="bg-orange-500 h-2 rounded-full" style="width: 70%;"></div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <p class="text-gray-600 mr-2">70%</p>
+                        <span class="text-2xl">😃</span>
+                    </div>
+                </div>
+                <!-- MongoDB -->
+                <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                    <div class="flex items-center justify-center mb-2">
+                        <i class="fas fa-database text-green-500 text-2xl mr-2"></i>
+                        <h3 class="font-bold">MongoDB</h3>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2 mb-2">
+                        <div class="bg-green-500 h-2 rounded-full" style="width: 40%;"></div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <p class="text-gray-600 mr-2">40%</p>
+                        <span class="text-2xl">😐</span>
+                    </div>
+                </div>
+                <!-- WebSocket -->
+                <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                    <div class="flex items-center justify-center mb-2">
+                        <i class="fas fa-plug text-yellow-500 text-2xl mr-2"></i>
+                        <h3 class="font-bold">WebSocket</h3>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2 mb-2">
+                        <div class="bg-yellow-500 h-2 rounded-full" style="width: 40%;"></div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <p class="text-gray-600 mr-2">40%</p>
+                        <span class="text-2xl">😐</span>
+                    </div>
+                </div>
+                <!-- Chart.js -->
+                <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                    <div class="flex items-center justify-center mb-2">
+                        <i class="fas fa-chart-line text-green-500 text-2xl mr-2"></i>
+                        <h3 class="font-bold">Chart.js</h3>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2 mb-2">
+                        <div class="bg-green-500 h-2 rounded-full" style="width: 40%;"></div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <p class="text-gray-600 mr-2">40%</p>
+                        <span class="text-2xl">😐</span>
+                    </div>
+                </div>
+                <!-- Github -->
+                <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                    <div class="flex items-center justify-center mb-2">
+                        <i class="fab fa-github text-black text-2xl mr-2"></i>
+                        <h3 class="font-bold">GitHub</h3>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2 mb-2">
+                        <div class="bg-black h-2 rounded-full" style="width: 60%;"></div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <p class="text-gray-600 mr-2">60%</p>
+                        <span class="text-2xl">🙂</span>
+                    </div>
+                </div>
+                <!-- NGINX -->
+                <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                    <div class="flex items-center justify-center mb-2">
+                        <i class="fas fa-server text-gray-600 text-2xl mr-2"></i>
+                        <h3 class="font-bold">NGINX</h3>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2 mb-2">
+                        <div class="bg-gray-600 h-2 rounded-full" style="width: 70%;"></div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <p class="text-gray-600 mr-2">70%</p>
+                        <span class="text-2xl">😃</span>
+                    </div>
+                </div>
+                <!-- AWS Cloud -->
+                <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                    <div class="flex items-center justify-center mb-2">
+                        <i class="fab fa-aws text-orange-500 text-2xl mr-2"></i>
+                        <h3 class="font-bold">AWS Cloud</h3>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2 mb-2">
+                        <div class="bg-orange-500 h-2 rounded-full" style="width: 50%;"></div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <p class="text-gray-600 mr-2">50%</p>
+                        <span class="text-2xl">🙂</span>
+                    </div>
+                </div>
+                <!-- Git -->
+                <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                    <div class="flex items-center justify-center mb-2">
+                        <i class="fab fa-git-alt text-red-600 text-2xl mr-2"></i>
+                        <h3 class="font-bold">Git</h3>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2 mb-2">
+                        <div class="bg-red-600 h-2 rounded-full" style="width: 90%;"></div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <p class="text-gray-600 mr-2">90%</p>
+                        <span class="text-2xl">😁</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-8">My Top Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+
+
+                <!-- Project 4: FIDA Global - Energy Meter App -->
+                <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+                    <img src="/api/placeholder/400/300" alt="Project 4" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">FIDA Global - Energy Meter App</h3>
+                        <p class="text-gray-600">Designed and developed an energy meter app, focusing primarily on the
+                            backend and overall system architecture, while also guiding the frontend development.</p>
+                        <ul class="flex gap-2 flex-wrap text-gray-600 mt-2">
+                            <li>
+                                <span
+                                    class="inline-block bg-sky-500 text-white text-xs font-bold py-1 px-2 rounded-full">React.Js</span>
+                            </li>
+                            <li>
+                                <span
+                                    class="inline-block bg-blue-700 text-white text-xs font-bold py-1 px-2 rounded-full">Redux</span>
+                            </li>
+                            <li>
+                                <span
+                                    class="inline-block bg-green-500 text-white text-xs font-bold py-1 px-2 rounded-full">Node.Js</span>
+                            </li>
+                            <li>
+                                <span
+                                    class="inline-block bg-black text-white text-xs font-bold py-1 px-2 rounded-full">Socket.io</span>
+                            </li>
+                            <li>
+                                <span
+                                    class="inline-block bg-blue-900 text-white text-xs font-bold py-1 px-2 rounded-full">MSSQL</span>
+                            </li>
+                            <li>
+                                <span
+                                    class="inline-block bg-green-700 text-white text-xs font-bold py-1 px-2 rounded-full">MongoDB</span>
+                            </li>
+                            <li>
+                                <span
+                                    class="inline-block bg-yellow-500 text-white text-xs font-bold py-1 px-2 rounded-full">Chart.Js</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Project 4: FIDA Global - Energy Meter App -->
+                <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+                    <img src="/api/placeholder/400/300" alt="Project 4" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">FIDA Global - Energy Meter App</h3>
+                        <p class="text-gray-600">Designed and developed an energy meter app, focusing primarily on the
+                            backend and overall system architecture, while also guiding the frontend development.</p>
+                        <ul class="flex gap-2 flex-wrap text-gray-600 mt-2">
+                            <li>
+                                <span
+                                    class="inline-block bg-sky-500 text-white text-xs font-bold py-1 px-2 rounded-full">React.Js</span>
+                            </li>
+                            <li>
+                                <span
+                                    class="inline-block bg-blue-700 text-white text-xs font-bold py-1 px-2 rounded-full">Redux</span>
+                            </li>
+                            <li>
+                                <span
+                                    class="inline-block bg-green-500 text-white text-xs font-bold py-1 px-2 rounded-full">Node.Js</span>
+                            </li>
+                            <li>
+                                <span
+                                    class="inline-block bg-black text-white text-xs font-bold py-1 px-2 rounded-full">Socket.io</span>
+                            </li>
+                            <li>
+                                <span
+                                    class="inline-block bg-blue-900 text-white text-xs font-bold py-1 px-2 rounded-full">MSSQL</span>
+                            </li>
+                            <li>
+                                <span
+                                    class="inline-block bg-green-700 text-white text-xs font-bold py-1 px-2 rounded-full">MongoDB</span>
+                            </li>
+                            <li>
+                                <span
+                                    class="inline-block bg-yellow-500 text-white text-xs font-bold py-1 px-2 rounded-full">Chart.Js</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Project 5: FIDA Global - Helpdesk -->
+                <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+                    <img src="/api/placeholder/400/300" alt="Project 5" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">FIDA Global - Helpdesk</h3>
+                        <p class="text-gray-600">Designed and developed a comprehensive Helpdesk system to manage client
+                            issues and tickets, improving operational oversight and supporting data-driven
+                            decision-making for the company.</p>
+                        <ul class="flex gap-2 flex-wrap text-gray-600 mt-2">
+                            <li>
+                                <span
+                                    class="inline-block bg-sky-500 text-white text-xs font-bold py-1 px-2 rounded-full">React.Js</span>
+                            </li>
+                            <li>
+                                <span
+                                    class="inline-block bg-blue-700 text-white text-xs font-bold py-1 px-2 rounded-full">Redux</span>
+                            </li>
+                            <li>
+                                <span
+                                    class="inline-block bg-green-500 text-white text-xs font-bold py-1 px-2 rounded-full">Node.Js</span>
+                            </li>
+                            <li>
+                                <span
+                                    class="inline-block bg-black text-white text-xs font-bold py-1 px-2 rounded-full">Socket.io</span>
+                            </li>
+                            <li>
+                                <span
+                                    class="inline-block bg-blue-900 text-white text-xs font-bold py-1 px-2 rounded-full">MSSQL</span>
+                            </li>
+                            <li>
+                                <span
+                                    class="inline-block bg-yellow-500 text-white text-xs font-bold py-1 px-2 rounded-full">Chart.Js</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Project 6: FIDA Global - HR Self-Service Portal Mobile App -->
+                <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+                    <img src="/api/placeholder/400/300" alt="Project 6" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">FIDA Global - HR Self-Service Portal Mobile App</h3>
+                        <p class="text-gray-600">Designed and developed a complete attendance management system that
+                            allows employees to mark attendance from their location, compatible with both iOS and
+                            Android platforms.</p>
+                        <ul class="flex gap-2 flex-wrap text-gray-600 mt-2">
+                            <li>
+                                <span
+                                    class="inline-block bg-sky-500 text-white text-xs font-bold py-1 px-2 rounded-full">React
+                                    Native</span>
+                            </li>
+                            <li>
+                                <span
+                                    class="inline-block bg-blue-700 text-white text-xs font-bold py-1 px-2 rounded-full">Redux</span>
+                            </li>
+                            <li>
+                                <span
+                                    class="inline-block bg-green-500 text-white text-xs font-bold py-1 px-2 rounded-full">Node.Js</span>
+                            </li>
+                            <li>
+                                <span
+                                    class="inline-block bg-blue-900 text-white text-xs font-bold py-1 px-2 rounded-full">MSSQL</span>
+                            </li>
+                            <li>
+                                <span
+                                    class="inline-block bg-gray-600 text-white text-xs font-bold py-1 px-2 rounded-full">Sqlite</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Project 7: Life Optima - Personal Financial Management System -->
+                <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+                    <img src="/api/placeholder/400/300" alt="Project 7" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">Life Optima - Personal Financial Management System</h3>
+                        <p class="text-gray-600">Life Optima is a personal finance management software I developed to
+                            track, manage, and optimize expenses, currently available as a web-based system. Future
+                            plans include expanding the service with a mobile app for enhanced accessibility.</p>
+                        <ul class="flex gap-2 flex-wrap text-gray-600 mt-2">
+                            <li>
+                                <span
+                                    class="inline-block bg-sky-500 text-white text-xs font-bold py-1 px-2 rounded-full">React.Js</span>
+                            </li>
+                            <li>
+                                <span
+                                    class="inline-block bg-blue-700 text-white text-xs font-bold py-1 px-2 rounded-full">Redux</span>
+                            </li>
+                            <li>
+                                <span
+                                    class="inline-block bg-green-500 text-white text-xs font-bold py-1 px-2 rounded-full">Node.Js</span>
+                            </li>
+                            <li>
+                                <span
+                                    class="inline-block bg-yellow-700 text-white text-xs font-bold py-1 px-2 rounded-full">Maria
+                                    DB</span>
+                            </li>
+                            <li>
+                                <span
+                                    class="inline-block bg-sky-500 text-white text-xs font-bold py-1 px-2 rounded-full">React
+                                    Native</span>
+                            </li>
+                            <li>
+                                <span
+                                    class="inline-block bg-gray-700 text-white text-xs font-bold py-1 px-2 rounded-full">Sqlite</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Project 8: Cloud POS and Inventory -->
+                <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+                    <img src="/api/placeholder/400/300" alt="Project 8" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">Cloud POS and Inventory</h3>
+                        <p class="text-gray-600">Designed and developed a comprehensive cloud-based POS and inventory
+                            management system to meet diverse requirements without limitations on location, device, or
+                            platform. Accessible from anywhere, the system supports desktop, laptop, and mobile devices
+                            and incorporates data protection features to mitigate data loss risk.</p>
+                        <ul class="flex gap-2 flex-wrap text-gray-600 mt-2">
+                            <li>
+                                <span
+                                    class="inline-block bg-sky-500 text-white text-xs font-bold py-1 px-2 rounded-full">React.Js</span>
+                            </li>
+                            <li>
+                                <span
+                                    class="inline-block bg-blue-700 text-white text-xs font-bold py-1 px-2 rounded-full">Redux</span>
+                            </li>
+                            <li>
+                                <span
+                                    class="inline-block bg-green-500 text-white text-xs font-bold py-1 px-2 rounded-full">Node.Js</span>
+                            </li>
+                            <li>
+                                <span
+                                    class="inline-block bg-yellow-700 text-white text-xs font-bold py-1 px-2 rounded-full">Maria
+                                    DB</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Project 9: Standalone POS and Inventory -->
+                <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+                    <img src="/api/placeholder/400/300" alt="Project 9" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">Standalone POS and Inventory</h3>
+                        <p class="text-gray-600">This standard POS and inventory system is built on a desktop
+                            application architecture, offering streamlined features and a user-friendly interface to
+                            simplify inventory and sales management, focusing on ease of use and flexibility for clients
+                            in retail businesses.</p>
+                        <ul class="flex gap-2 flex-wrap text-gray-600 mt-2">
+                            <li>
+                                <span
+                                    class="inline-block bg-sky-500 text-white text-xs font-bold py-1 px-2 rounded-full">C#</span>
+                            </li>
+                            <li>
+                                <span
+                                    class="inline-block bg-blue-700 text-white text-xs font-bold py-1 px-2 rounded-full">WPF</span>
+                            </li>
+                            <li>
+                                <span
+                                    class="inline-block bg-green-500 text-white text-xs font-bold py-1 px-2 rounded-full">SQLite</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-8">Where I have worked at</h2>
+            <div class="space-y-8">
+                <!-- Senior Software Engineer at Fida Global -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-bold text-xl mb-2">Senior Software Engineer - Fida Global</h3>
+                    <p class="text-gray-600 mb-4">February 2018 - Present</p>
+                    <p class="text-gray-600">Developing, maintaining, and restructuring the company's main product: the
+                        HR Management System.</p>
+                    <ul class="list-disc list-inside text-gray-600">
+                        <li>Integrated devices such as biometric time attendance systems through SDKs and data
+                            transmission.</li>
+                        <li>Created web apps, mobile apps, and desktop apps, designing the full-stack architecture.</li>
+                        <li>Developed a mobile attendance app using React Native, allowing employees to mark attendance
+                            from their location. The app integrates with the main HR system and is compatible with both
+                            iOS and Android.</li>
+                        <li>Developed a Helpdesk system for internal use using React.js, Node.js, and MSSQL, integrating
+                            Socket.io for triggering messages and notifications. This system effectively handles and
+                            tracks client complaints and issues.</li>
+                        <li>Maintained and upgraded Windows and Linux servers, ensuring optimal performance and
+                            deploying essential services.</li>
+                        <li>Provided guidance and consultation to interns, supporting their development and integration
+                            into the team.</li>
+                    </ul>
+                </div>
+
+                <!-- Freelancer -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-bold text-xl mb-2">Freelancer</h3>
+                    <p class="text-gray-600 mb-4">December 2016 - February 2018</p>
+                    <p class="text-gray-600">Worked as a freelancer providing customized software solutions for various
+                        industries.</p>
+                    <ul class="list-disc list-inside text-gray-600">
+                        <li>Visited customer sites, gathered requirements, and provided tailored software solutions.
+                        </li>
+                        <li>Created a custom POS and Inventory product for communication and stationeries, with a focus
+                            on industries with similar needs.</li>
+                    </ul>
+                </div>
+
+                <!-- Software Engineer at IAS Solutions -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-bold text-xl mb-2">Software Engineer - IAS Solutions</h3>
+                    <p class="text-gray-600 mb-4">September 2014 - December 2016</p>
+                    <p class="text-gray-600">Skilled in designing user interfaces with WPF, Windows Forms, HTML, CSS
+                        (including Bootstrap), and client-side programming with JavaScript.</p>
+                    <ul class="list-disc list-inside text-gray-600">
+                        <li>Developed desktop and web applications using C#.NET and ASP.NET, focusing on database design
+                            and optimization.</li>
+                        <li>Created POS and inventory systems for retail industries and designed reports using RDL and
+                            RDLC.</li>
+                        <li>Provided user support and handled system analysis and design tasks.</li>
+                        <li>Contributed to all phases of the software development lifecycle, from planning to deployment
+                            and maintenance.</li>
+                    </ul>
+                </div>
+
+                <!-- IT Technician at PC House -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-bold text-xl mb-2">IT Technician - PC House</h3>
+                    <p class="text-gray-600 mb-4">January 2011 - December 2012</p>
+                    <p class="text-gray-600">Specialized in repairing and maintaining desktop and laptop computers, and
+                        performing software installations.</p>
+                </div>
+
+                <!-- Video Editor at Prasanga Video -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-bold text-xl mb-2">Video Editor - Prasanga Video</h3>
+                    <p class="text-gray-600 mb-4">November 2006 - August 2010</p>
+                    <p class="text-gray-600">Worked as a video editor using Adobe Premiere Pro and After Effects. Also
+                        designed CD/DVD covers and menus using Adobe Encore DVD and Photoshop.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Blog Section -->
+    <!-- <section id="blog" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-8">Blog</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-100 rounded-lg p-6">
+                    <h3 class="font-bold text-xl mb-2">Understanding React Hooks</h3>
+                    <p class="text-gray-600 mb-4">A deep dive into React Hooks and their use cases.</p>
+                    <a href="#" class="text-sky-500 hover:text-sky-600">Read More →</a>
+                </div>
+                <div class="bg-gray-100 rounded-lg p-6">
+                    <h3 class="font-bold text-xl mb-2">Node.js Best Practices</h3>
+                    <p class="text-gray-600 mb-4">Tips and tricks for writing better Node.js applications.</p>
+                    <a href="#" class="text-sky-500 hover:text-sky-600">Read More →</a>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Resume Section -->
+    <section id="resume" class="py-20 bg-gray-100 dark:bg-gray-800">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-8 text-gray-900 dark:text-gray-100">Resume</h2>
+            <a href="assets/resume.pdf" target="_blank"
+                class="bg-sky-500 text-white px-8 py-4 rounded-lg hover:bg-sky-600 transition duration-300">
+                Download Resume
+            </a>
+        </div>
+    </section>
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-8">Contact</h2>
+            <div class="max-w-lg mx-auto">
+                <form action="https://your-backend-service-url/send-email" method="POST" class="space-y-6">
+                    <div>
+                        <input type="text" name="name" placeholder="Name" required
+                            class="w-full p-3 border rounded-lg" />
+                    </div>
+                    <div>
+                        <input type="email" name="email" placeholder="Email" required
+                            class="w-full p-3 border rounded-lg" />
+                    </div>
+                    <div>
+                        <textarea name="message" placeholder="Message" rows="4" required
+                            class="w-full p-3 border rounded-lg"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-sky-500 text-white py-3 rounded-lg hover:bg-sky-600 transition duration-300">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-8">Testimonials</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-4 rounded-full shadow-md flex items-center">
+                    <div class="w-18 h-18 mr-6">
+                        <img src="images/testimon/chamila.jpg" alt="Jane Smith"
+                            class="w-full h-full rounded-full object-cover" />
+                    </div>
+                    <div>
+                        <p class="text-gray-600 mb-4">"John is an exceptional developer who consistently delivers
+                            high-quality work."</p>
+                        <div class="font-bold">- G.H. Chamila Ruwantha, CEO</div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-4 rounded-full shadow-md flex items-center">
+                    <div class="w-18 h-18 mr-6">
+                        <img src="images/testimon/chamila.jpg" alt="Jane Smith"
+                            class="w-full h-full rounded-full object-cover" />
+                    </div>
+                    <div>
+                        <p class="text-gray-600 mb-4">"John is an exceptional developer who consistently delivers
+                            high-quality work."</p>
+                        <div class="font-bold">- Jane Smith, CEO</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 Developer Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Section -->
+
+    <!-- Add this to include Font Awesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <script>
+        document.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section'); // Select each section
+            const navLinks = document.querySelectorAll('.md\\:flex a');
+
+            let currentSectionId = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                if (pageYOffset >= sectionTop - sectionHeight / 3) {
+                    currentSectionId = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === currentSectionId) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
