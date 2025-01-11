@@ -3,14 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - Susantha Perera</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Susantha Perea's portfolio showcasing software development expertise, projects, and skills in web and app development.">
+  <meta name="keywords" content="Susantha Perea, software engineer, portfolio, web development, mobile app development, full-stack developer, React, Node.js, C#, MySQL, MongoDB">
+  <meta name="author" content="Susantha Perea">
+  
+  <!-- Social Media Meta Tags (Open Graph) -->
+  <meta property="og:title" content="Susantha Perea - Software Engineer Portfolio">
+  <meta property="og:description" content="Explore Susantha Perea's portfolio to see projects and expertise in software engineering, web development, and mobile app development.">
+  <meta property="og:image" content="your-image-url.jpg"> <!-- Replace with your image URL -->
+  <meta property="og:url" content="https://susanthaperera.site"> <!-- Replace with your website URL -->
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:title" content="Susantha Perea - Software Engineer Portfolio">
+  <meta name="twitter:description" content="Explore Susantha Perea's portfolio to see projects and expertise in software engineering, web development, and mobile app development.">
+  <meta name="twitter:image" content="your-image-url.jpg"> <!-- Replace with your image URL -->
+  <meta name="twitter:card" content="summary_large_image">
+
+  <title>Susantha Perea - Software Engineer Portfolio</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Replace with your favicon URL -->
+
+  <!-- FontAwesome for icons -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
+  <!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
   
-  </style>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
   <style>
     /* Sticky navbar styles */
     nav {
@@ -26,7 +50,7 @@
     }
   </style>
   
- <script>
+  <script>
     // Function to scroll the page to the top
     function scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -44,37 +68,84 @@
       }
     }
   </script>
-  <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="bg-gray-50 text-gray-800 font-sans">
-<!-- Navigation Bar -->
-  <nav class="bg-blue-500 p-4 shadow-sm">
+ <!-- Navigation Bar -->
+  <nav class="bg-sky-500 p-4  ">
     <div class="container mx-auto flex justify-between items-center">
       <a href="#" class="text-white font-bold text-2xl">Susantha Perera</a>
-      <ul class="flex space-x-6 text-white">
+      
+      <!-- Mobile Navbar (Hidden by default) -->
+      <div class="lg:hidden">
+        <button id="burgerIcon" class="text-white text-3xl">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <!-- Desktop Navbar Links (Visible on larger screens) -->
+      <ul class="hidden lg:flex space-x-6 text-white">
         <li><a href="#about" class="hover:text-yellow-500 transition-colors">About Me</a></li>
         <li><a href="#skills" class="hover:text-yellow-500 transition-colors">Skills</a></li>
-        <li><a href="#experience" class="hover:text-yellow-500 transition-colors">Experience</a></li>
         <li><a href="#projects" class="hover:text-yellow-500 transition-colors">Projects</a></li>
         <li><a href="#contact" class="hover:text-yellow-500 transition-colors">Contact</a></li>
       </ul>
     </div>
   </nav>
+
+<!-- Mobile Menu Backdrop -->
+<div id="mobileMenuBackdrop" class="fixed inset-0 bg-black bg-opacity-80 hidden z-20">
+  <div class="flex justify-end p-4">
+    <button id="closeMenuBtn" class="text-white text-3xl">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+  <div class="flex flex-col items-center space-y-6">
+    <a href="#about" class="text-white text-xl hover:text-yellow-500 transition-colors" data-close="true">About Me</a>
+    <a href="#skills" class="text-white text-xl hover:text-yellow-500 transition-colors" data-close="true">Skills</a>
+    <a href="#projects" class="text-white text-xl hover:text-yellow-500 transition-colors" data-close="true">Projects</a>
+    <a href="#contact" class="text-white text-xl hover:text-yellow-500 transition-colors" data-close="true">Contact</a>
+  </div>
+</div>
+
+<!-- Add external links for FontAwesome -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<script>
+  // Burger icon click to show mobile menu
+  document.getElementById("burgerIcon").addEventListener("click", function() {
+    document.getElementById("mobileMenuBackdrop").classList.remove("hidden");
+  });
+
+  // Close button click to hide mobile menu
+  document.getElementById("closeMenuBtn").addEventListener("click", function() {
+    document.getElementById("mobileMenuBackdrop").classList.add("hidden");
+  });
+
+  // Close the mobile menu when a nav item is clicked
+  const navLinks = document.querySelectorAll('[data-close="true"]');
+  navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      document.getElementById("mobileMenuBackdrop").classList.add("hidden");
+    });
+  });
+</script>
+
   
 <!-- Scroll to Top Button -->
   <button id="scrollToTopButton" onclick="scrollToTop()" 
-          class="fixed bottom-8 right-8 bg-blue-500 text-white p-3 rounded-full shadow-lg opacity-0 transition-opacity duration-300 ease-in-out hover:bg-blue-600">
+          class="fixed bottom-8 right-8 bg-sky-500 text-white p-3 rounded-full shadow-lg opacity-0 transition-opacity duration-300 ease-in-out hover:bg-sky-600">
     <!-- Custom Image for the arrow -->
     <img src="./images/hand.png" alt="Scroll Up" class="w-10 h-10">
   </button>
 <!-- Banner Section -->
-<header class="bg-gradient-to-r from-blue-500 to-blue-300 py-12 text-center relative">
+<header class="bg-gradient-to-r from-sky-500 to-sky-300 py-12 text-center relative">
   <div class="container mx-auto">
     <div class="flex flex-col items-center">
       <img
         src="./images/profile/me_1.jpg"
         alt="Susantha Perera"
-        class="rounded-full w-48 h-48 object-cover border-4 border-white shadow-sm"
+        class="rounded-full w-48 h-48 object-cover border-4 border-white  "
         style="object-position: 0% 20%;" />
 
       <h1 class="text-4xl font-bold text-white mt-4">Susantha Perera</h1>
@@ -83,13 +154,15 @@
       <!-- CV Download Button and Social Media Icons -->
       <div class="flex items-center justify-center mt-6 space-x-6">
         <!-- CV Download Button -->
-        <a
-          href="path/to/your/cv.pdf" 
-          download
-          class="inline-block py-2 px-6 bg-yellow-500 text-white rounded-md hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500"
-        >
-          Download My CV
-        </a>
+   <a
+  href="./assets/resume.pdf" 
+  download
+  target="_blank" 
+  class="inline-block py-2 px-6 bg-yellow-500 text-white rounded-md hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+>
+  Download My CV
+</a>
+
 
         <!-- Social Media Icons -->
         <div class="flex space-x-6">
@@ -140,105 +213,105 @@
 <section class="py-10" id="skills">
   <div class="container mx-auto px-4">
     <h2 class="text-3xl font-bold text-center mb-8">Skills</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-6">
+    <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 gap-6">
       <!-- Skill Boxes -->
-      <!-- AWS -->
-      <div class="bg-white rounded-lg shadow-sm p-6 text-center">
-        <i class="fab fa-aws text-sky-500 text-5xl mb-4"></i>
+         <!-- AWS -->
+      <div class="bg-white rounded-lg p-6 text-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/640px-Amazon_Web_Services_Logo.svg.png" alt="AWS" class="w-20 mx-auto mb-4">
         <h3 class="font-bold text-xl">AWS</h3>
       </div>
       <!-- Docker -->
-      <div class="bg-white rounded-lg shadow-sm p-6 text-center">
+      <div class="bg-white rounded-lg   p-6 text-center">
         <i class="fab fa-docker text-sky-500 text-5xl mb-4"></i>
         <h3 class="font-bold text-xl">Docker</h3>
       </div>
       <!-- IIS -->
-      <div class="bg-white rounded-lg shadow-sm p-6 text-center">
+      <div class="bg-white rounded-lg   p-6 text-center">
         <i class="fas fa-server text-sky-500 text-5xl mb-4"></i>
         <h3 class="font-bold text-xl">IIS</h3>
       </div>
       <!-- NGINX -->
-      <div class="bg-white rounded-lg shadow-sm p-6 text-center">
-        <i class="fas fa-network-wired text-sky-500 text-5xl mb-4"></i>
+      <div class="bg-white rounded-lg   p-6 text-center">
+	     <img src="https://www.myqnap.org/wp-content/uploads/nginx-3628948-3030173-1.png" alt="NGINX" class="w-20 mx-auto mb-4">
         <h3 class="font-bold text-xl">NGINX</h3>
       </div>
       <!-- Node.js -->
-      <div class="bg-white rounded-lg shadow-sm p-6 text-center">
-        <i class="fab fa-node text-sky-500 text-5xl mb-4"></i>
+      <div class="bg-white rounded-lg   p-6 text-center">
+       	     <img src="https://www.step2gen.com/WebsiteAssets/assets/images/nodejs.svg" alt="Node.js" class="w-20 mx-auto mb-4">
         <h3 class="font-bold text-xl">Node.js</h3>
       </div>
       <!-- React.js -->
-      <div class="bg-white rounded-lg shadow-sm p-6 text-center">
-        <i class="fab fa-react text-sky-500 text-5xl mb-4"></i>
+      <div class="bg-white rounded-lg   p-6 text-center">
+         	     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/React_Logo_SVG.svg/1200px-React_Logo_SVG.svg.png" alt="React.js" class="w-20 mx-auto mb-4">
         <h3 class="font-bold text-xl">React.js</h3>
       </div>
       <!-- NestJS -->
-      <div class="bg-white rounded-lg shadow-sm p-6 text-center">
-        <i class="fas fa-cubes text-sky-500 text-5xl mb-4"></i>
-        <h3 class="font-bold text-xl">NestJS</h3>
+      <div class="bg-white rounded-lg   p-6 text-center">
+        <img src="https://i.namu.wiki/i/X7RPRZJiL_bDk-b5yfaeCqEaINp3iwm7ngVhzN9LDg4hNjz0Bs3QTo7pgbCfGW3xp_sQZxMGUfnxBAXGNFwGKw.svg" alt="NestJS" class="w-20 mx-auto mb-4">
+       <h3 class="font-bold text-xl">NestJS</h3>
       </div>
       <!-- ASP.NET -->
-      <div class="bg-white rounded-lg shadow-sm p-6 text-center">
+      <div class="bg-white rounded-lg   p-6 text-center">
         <i class="fas fa-code text-sky-500 text-5xl mb-4"></i>
         <h3 class="font-bold text-xl">ASP.NET</h3>
       </div>
       <!-- WPF -->
-      <div class="bg-white rounded-lg shadow-sm p-6 text-center">
+      <div class="bg-white rounded-lg   p-6 text-center">
         <i class="fas fa-desktop text-sky-500 text-5xl mb-4"></i>
         <h3 class="font-bold text-xl">WPF</h3>
       </div>
       <!-- C# -->
-      <div class="bg-white rounded-lg shadow-sm p-6 text-center">
-        <i class="fas fa-terminal text-sky-500 text-5xl mb-4"></i>
+      <div class="bg-white rounded-lg   p-6 text-center">
+         <img src="https://www.jetbrains.com/guide/assets/csharp-logo-265a149e.svg" alt="C sharp" class="w-20 mx-auto mb-4">
         <h3 class="font-bold text-xl">C#</h3>
       </div>
       <!-- JavaScript -->
-      <div class="bg-white rounded-lg shadow-sm p-6 text-center">
+      <div class="bg-white rounded-lg   p-6 text-center">
         <i class="fab fa-js text-sky-500 text-5xl mb-4"></i>
         <h3 class="font-bold text-xl">JavaScript</h3>
       </div>
       <!-- TypeScript -->
-      <div class="bg-white rounded-lg shadow-sm p-6 text-center">
+      <div class="bg-white rounded-lg   p-6 text-center">
         <i class="fas fa-code text-sky-500 text-5xl mb-4"></i>
         <h3 class="font-bold text-xl">TypeScript</h3>
       </div>
       <!-- HTML5 -->
-      <div class="bg-white rounded-lg shadow-sm p-6 text-center">
-        <i class="fab fa-html5 text-sky-500 text-5xl mb-4"></i>
+      <div class="bg-white rounded-lg   p-6 text-center">
+       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png" alt="HTML5" class="w-20 mx-auto mb-4">
         <h3 class="font-bold text-xl">HTML5</h3>
       </div>
       <!-- CSS3 -->
-      <div class="bg-white rounded-lg shadow-sm p-6 text-center">
+      <div class="bg-white rounded-lg   p-6 text-center">
         <i class="fab fa-css3-alt text-sky-500 text-5xl mb-4"></i>
         <h3 class="font-bold text-xl">CSS3</h3>
       </div>
       <!-- Tailwind CSS -->
-      <div class="bg-white rounded-lg shadow-sm p-6 text-center">
+      <div class="bg-white rounded-lg   p-6 text-center">
         <i class="fas fa-palette text-sky-500 text-5xl mb-4"></i>
         <h3 class="font-bold text-xl">Tailwind CSS</h3>
       </div>
       <!-- Bootstrap -->
-      <div class="bg-white rounded-lg shadow-sm p-6 text-center">
+      <div class="bg-white rounded-lg   p-6 text-center">
         <i class="fab fa-bootstrap text-sky-500 text-5xl mb-4"></i>
         <h3 class="font-bold text-xl">Bootstrap</h3>
       </div>
       <!-- MSSQL -->
-      <div class="bg-white rounded-lg shadow-sm p-6 text-center">
+      <div class="bg-white rounded-lg   p-6 text-center">
         <i class="fas fa-database text-sky-500 text-5xl mb-4"></i>
         <h3 class="font-bold text-xl">MSSQL</h3>
       </div>
       <!-- MySQL -->
-      <div class="bg-white rounded-lg shadow-sm p-6 text-center">
-        <i class="fas fa-database text-sky-500 text-5xl mb-4"></i>
+      <div class="bg-white rounded-lg   p-6 text-center">
+   <img src="https://images.sftcdn.net/images/t_app-icon-m/p/917c77e8-96d1-11e6-8453-00163ed833e7/3780880766/mysql-com-icon.png" alt="MySQL" class="w-20 mx-auto mb-4">
         <h3 class="font-bold text-xl">MySQL</h3>
       </div>
       <!-- MongoDB -->
-      <div class="bg-white rounded-lg shadow-sm p-6 text-center">
+      <div class="bg-white rounded-lg   p-6 text-center">
         <i class="fas fa-leaf text-sky-500 text-5xl mb-4"></i>
         <h3 class="font-bold text-xl">MongoDB</h3>
       </div>
       <!-- SQLite -->
-      <div class="bg-white rounded-lg shadow-sm p-6 text-center">
+      <div class="bg-white rounded-lg   p-6 text-center">
         <i class="fas fa-database text-sky-500 text-5xl mb-4"></i>
         <h3 class="font-bold text-xl">SQLite</h3>
       </div>
@@ -247,36 +320,36 @@
 </section>
 
   <!-- Experience Section -->
-  <section class="py-10" id="experience">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-6">Professional Experience</h2>
-      <div class="space-y-6">
-        <div>
-          <h3 class="font-bold text-lg">Senior Software Engineer @ FIDA Global</h3>
-          <p class="text-sm text-gray-600">Feb. 2018 – Present</p>
-          <ul class="list-disc ml-5 mt-2">
-            <li>Refactored HRIS system into MVC architecture, optimizing efficiency.</li>
-            <li>Trained and mentored interns, introducing modern technologies.</li>
-            <li>Built a helpdesk ticketing system, improving staff efficiency by 40%.</li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="font-bold text-lg">Freelancer</h3>
-          <p class="text-sm text-gray-600">Dec. 2016 – Feb. 2018</p>
-          <ul class="list-disc ml-5 mt-2">
-            <li>Developed POS and inventory systems for various industries.</li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="font-bold text-lg">Software Engineer @ IAS Solutions</h3>
-          <p class="text-sm text-gray-600">Sep. 2014 – Dec. 2016</p>
-          <ul class="list-disc ml-5 mt-2">
-            <li>Developed small-scale systems and led project teams.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- <section class="py-10" id="experience"> -->
+    <!-- <div class="container mx-auto px-4"> -->
+      <!-- <h2 class="text-3xl font-bold text-center mb-6">Professional Experience</h2> -->
+      <!-- <div class="space-y-6"> -->
+        <!-- <div> -->
+          <!-- <h3 class="font-bold text-lg">Senior Software Engineer @ FIDA Global</h3> -->
+          <!-- <p class="text-sm text-gray-600">Feb. 2018 – Present</p> -->
+          <!-- <ul class="list-disc ml-5 mt-2"> -->
+            <!-- <li>Refactored HRIS system into MVC architecture, optimizing efficiency.</li> -->
+            <!-- <li>Trained and mentored interns, introducing modern technologies.</li> -->
+            <!-- <li>Built a helpdesk ticketing system, improving staff efficiency by 40%.</li> -->
+          <!-- </ul> -->
+        <!-- </div> -->
+        <!-- <div> -->
+          <!-- <h3 class="font-bold text-lg">Freelancer</h3> -->
+          <!-- <p class="text-sm text-gray-600">Dec. 2016 – Feb. 2018</p> -->
+          <!-- <ul class="list-disc ml-5 mt-2"> -->
+            <!-- <li>Developed POS and inventory systems for various industries.</li> -->
+          <!-- </ul> -->
+        <!-- </div> -->
+        <!-- <div> -->
+          <!-- <h3 class="font-bold text-lg">Software Engineer @ IAS Solutions</h3> -->
+          <!-- <p class="text-sm text-gray-600">Sep. 2014 – Dec. 2016</p> -->
+          <!-- <ul class="list-disc ml-5 mt-2"> -->
+            <!-- <li>Developed small-scale systems and led project teams.</li> -->
+          <!-- </ul> -->
+        <!-- </div> -->
+      <!-- </div> -->
+    <!-- </div> -->
+  <!-- </section> -->
 
 
 <!-- Projects Section -->
@@ -289,18 +362,17 @@
         <img
           src="https://www.shutterstock.com/image-photo/pospoint-sale-grocery-retail-management-260nw-2115763502.jpg"
           alt="Cloud POS and Inventory"
-          class="w-full md:w-1/3 rounded shadow-sm"
+          class="w-full md:w-1/3 rounded  "
         />
         <div class="md:w-2/3">
           <h3 class="text-xl font-bold">Cloud POS and Inventory</h3>
           <p>
-            A multi-client point-of-sale system designed using React.js, Node.js, and MariaDB. 
-            It supports real-time inventory tracking, and I implemented both front-end and back-end systems for smooth data flow.
+            Developed a scalable cloud-based Point-of-Sale (POS) and inventory management system that supports multiple clients with a single backend, enabling efficient business operations. The system allows real-time updates and seamless management of sales, stock, and reporting
           </p>
           <a
             href="https://example.com/cloud-pos-and-inventory"
             target="_blank"
-            class="text-blue-500 hover:underline"
+            class="text-sky-500 hover:underline"
           >
             More Details
           </a>
@@ -312,18 +384,17 @@
         <img
           src="https://www.shutterstock.com/image-illustration/solar-power-monitoring-system-digital-260nw-2487235729.jpg"
           alt="IoT Energy Metering System"
-          class="w-full md:w-1/3 rounded shadow-sm"
+          class="w-full md:w-1/3 rounded  "
         />
         <div class="md:w-2/3">
           <h3 class="text-xl font-bold">IoT Energy Metering System</h3>
           <p>
-            This system tracks real-time energy consumption from IoT devices. It is designed with Node.js for backend processing and MongoDB for database management.
-            It handles data stability, removing duplicates, and processing reset meters, offering a real-time monitoring solution.
-          </p>
+       Developed a robust Point-of-Sale (POS) and inventory management system tailored for the stationery, grocery, and retail industries. The system allows businesses to efficiently track sales, manage inventory, and generate detailed reports.
+	   </p>
           <a
             href="https://example.com/iot-energy-metering-system"
             target="_blank"
-            class="text-blue-500 hover:underline"
+            class="text-sky-500 hover:underline"
           >
             More Details
           </a>
@@ -335,7 +406,7 @@
         <img
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRptxBpq1tfcQwJBwWnVy1GYR8aMWu_CAJIsaRPl0X-Ybu9nFSQmEBEz126Ipa9jYrG1VU&usqp=CAU"
           alt="Desktop POS"
-          class="w-full md:w-1/3 rounded shadow-sm"
+          class="w-full md:w-1/3 rounded  "
         />
         <div class="md:w-2/3">
           <h3 class="text-xl font-bold">Desktop POS</h3>
@@ -346,7 +417,7 @@
           <a
             href="https://example.com/desktop-pos"
             target="_blank"
-            class="text-blue-500 hover:underline"
+            class="text-sky-500 hover:underline"
           >
             More Details
           </a>
@@ -362,24 +433,50 @@
     <h2 class="text-3xl font-bold text-center mb-6">Contact Me</h2>
     
     <!-- Content Details Section -->
-    <div class="flex justify-center mb-8 space-x-12">
-      <!-- Phone Icon and Details -->
-      <div class="flex items-center space-x-3">
+    <div class="flex flex-wrap justify-center mb-8 space-x-12 md:space-x-6">
+      <!-- Phone Icon and Details with Tooltip -->
+      <div class="flex items-center space-x-3 relative group mb-6 md:mb-0">
         <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Phone Icon" class="w-6 h-6">
-        <span class="text-lg">+123 456 7890</span>
+        <span class="text-lg">+94771147484</span>
+        <!-- Tooltip -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 px-3 py-2 text-sm text-white bg-sky-500 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          Call me on phone
+        </div>
       </div>
-      <!-- Email Icon and Details -->
-      <div class="flex items-center space-x-3">
-        <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email Icon" class="w-6 h-6">
-        <span class="text-lg">susantha@example.com</span>
+      
+      <!-- WhatsApp Icon and Details with Tooltip -->
+      <div class="flex items-center space-x-3 relative group mb-6 md:mb-0">
+        <a href="https://wa.me/+94771147484" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp Icon" class="w-6 h-6">
+        </a>
+        <span class="text-lg">+94771147484</span>
+        <!-- Tooltip -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 px-3 py-2 text-sm text-white bg-sky-500 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          Chat with me on WhatsApp
+        </div>
       </div>
-      <!-- Location Icon and Details -->
-      <div class="flex items-center space-x-3">
+      
+      <!-- Email Icon and Details with Tooltip -->
+      <div class="flex items-center space-x-3 relative group mb-6 md:mb-0">
+        <img src="https://cdn-icons-png.flaticon.com/512/281/281769.png" alt="Email Icon" class="w-6 h-6">
+        <span class="text-lg">spmskperera@gmail.com</span>
+        <!-- Tooltip -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 px-3 py-2 text-sm text-white bg-sky-500 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          Send me an email
+        </div>
+      </div>
+      
+      <!-- Location Icon and Details with Tooltip -->
+      <div class="flex items-center space-x-3 relative group mb-6 md:mb-0">
         <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Location Icon" class="w-6 h-6">
         <span class="text-lg">Colombo, Sri Lanka</span>
+        <!-- Tooltip -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 px-3 py-2 text-sm text-white bg-sky-500 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          My location
+        </div>
       </div>
     </div>
-    
+
     <!-- Contact Form -->
     <form action="#" method="POST" class="space-y-6 max-w-lg mx-auto" id="contact">
       <input
@@ -405,18 +502,50 @@
       ></textarea>
       <button
         type="submit"
-        class="w-full py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600"
+        class="w-full py-3 bg-sky-500 text-white rounded-md hover:bg-sky-600"
       >
         Send Message
       </button>
     </form>
+
+    <!-- Add EmailJS Script -->
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS user ID
+      })();
+
+      // Form submission handler
+      const form = document.getElementById("contact");
+      form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        const formData = new FormData(form);
+        const name = formData.get("name");
+        const email = formData.get("email");
+        const message = formData.get("message");
+
+        // Send email via EmailJS
+        emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+          name: name,
+          email: email,
+          message: message,
+        })
+        .then(function(response) {
+          alert("Message sent successfully!");
+          form.reset(); // Reset the form after submission
+        }, function(error) {
+          alert("Error sending message: " + error.text);
+        });
+      });
+    </script>
+
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
   </div>
 </section>
 
 
-
 <!-- Footer Section -->
-<footer class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-6">
+<footer class="bg-gradient-to-r from-sky-600 to-sky-800 text-white py-6">
   <div class="container mx-auto text-center">
     <p>&copy; 2025 Susantha Perera. All Rights Reserved.</p>
     <div class="mt-2">
@@ -489,6 +618,8 @@
 
   // Scroll event to highlight the nav link
   window.addEventListener('scroll', () => {
+    console.log('Scroll Y:', window.scrollY);
+  console.log('Current Section:', currentSection);
     highlightActiveLink();
 
     // Add 'sticky' class to nav when scrolled past the top
@@ -516,7 +647,14 @@
   document.addEventListener('DOMContentLoaded', () => {
     highlightActiveLink();
   });
+  
+  
+  
+  
+
+  
 </script>
+
 
 
 
