@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Detail Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Scroll-to-top button */
+        #scrollToTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            padding: 15px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        #scrollToTopBtn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Header Section -->
+    <header class="bg-blue-600 text-white text-center py-8">
+        <h1 class="text-4xl font-bold">Project Name</h1>
+        <p class="text-lg mt-2">A brief description of your project.</p>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="max-w-7xl mx-auto p-6">
+        <!-- Project Overview -->
+        <section class="mt-12">
+            <h2 class="text-3xl font-semibold text-gray-800">Project Overview</h2>
+            <p class="text-gray-700 mt-4">
+                This project involves developing a cutting-edge web application designed to streamline business operations. It focuses on providing real-time data, a user-friendly interface, and scalability to accommodate future needs. Our team worked hard to ensure that the application is both efficient and intuitive for users.
+            </p>
+        </section>
+
+        <!-- Screenshots Section -->
+        <section class="mt-12">
+            <h2 class="text-3xl font-semibold text-gray-800">Screenshots</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
+                <img src="https://via.placeholder.com/400" alt="Screenshot 1" class="rounded-lg shadow-md">
+                <img src="https://via.placeholder.com/400" alt="Screenshot 2" class="rounded-lg shadow-md">
+                <img src="https://via.placeholder.com/400" alt="Screenshot 3" class="rounded-lg shadow-md">
+            </div>
+        </section>
+
+        <!-- Technologies Section -->
+        <section class="mt-12">
+            <h2 class="text-3xl font-semibold text-gray-800">Technologies Used</h2>
+            <ul class="list-disc pl-5 mt-4 text-gray-700">
+                <li>HTML, CSS, JavaScript</li>
+                <li>Tailwind CSS</li>
+                <li>React.js</li>
+                <li>Node.js</li>
+                <li>MongoDB</li>
+            </ul>
+        </section>
+
+        <!-- Features Section -->
+        <section class="mt-12">
+            <h2 class="text-3xl font-semibold text-gray-800">Key Features</h2>
+            <ul class="list-disc pl-5 mt-4 text-gray-700">
+                <li>User Authentication and Authorization</li>
+                <li>Real-time Data Updates</li>
+                <li>Responsive Design</li>
+                <li>RESTful API Integration</li>
+                <li>Mobile-friendly Interface</li>
+            </ul>
+        </section>
+
+        <!-- Collaboration Section -->
+        <section class="mt-12">
+            <h2 class="text-3xl font-semibold text-gray-800">Collaboration</h2>
+            <p class="text-gray-700 mt-4">
+                This project was developed by a team of passionate developers, designers, and product managers, collaborating to deliver a solution that meets both business and user needs. We used an Agile approach to ensure fast iterations and feedback from stakeholders.
+            </p>
+        </section>
+    </main>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" title="Go to top">
+        ↑
+    </button>
+
+    <script>
+        // Get the button
+        const mybutton = document.getElementById("scrollToTopBtn");
+
+        // Show the button when user scrolls down 100px from the top of the page
+        window.onscroll = function() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        };
+
+        // Scroll to the top of the document when the user clicks the button
+        mybutton.onclick = function() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+        };
+    </script>
+</body>
+</html>
